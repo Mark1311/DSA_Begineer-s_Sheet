@@ -1,0 +1,22 @@
+Questions:- Given an array of size n-1 such that it only contains distinct integers in the range of 1 to n. Return the missing element?
+
+Examples:- 
+
+Input: n = 5, arr[] = {1,2,3,5}
+Output: 4
+Explanation : All the numbers from 1 to 5 are present except 4.
+
+Input: n = 2, arr[] = {1}
+Output: 2
+Explanation : All the numbers from 1 to 2 are present except 2.
+
+Answers:- 
+
+class Solution:
+  
+   def missingNumber(self, n, arr):
+        an = sorted(arr)
+        for i in range(0,n-1):
+            if i+1 != an[i]:
+                return i+1
+
